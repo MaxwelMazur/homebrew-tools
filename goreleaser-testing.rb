@@ -5,15 +5,14 @@
 class GoreleaserTesting < Formula
   desc ""
   homepage "https://github.com/MaxwelMazur/homebrew-tools"
-  version "0.1.0-beta.22"
+  version "0.1.0-beta.23"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/MaxwelMazur/goreleaser-testing/releases/download/v0.1.0-beta.22/goreleaser-testing_0.1.0-beta.22_Darwin_x86_64.tar.gz"
-      sha256 "6ed87ef067c9641fa2681f979825b41f0896316aac9dfe3d14a376fe28995ae9"
+      url "https://github.com/MaxwelMazur/goreleaser-testing/releases/download/v0.1.0-beta.23/goreleaser-testing_0.1.0-beta.23_Darwin_x86_64.tar.gz"
+      sha256 "b60c50c5bd8d7dd98d7b6d60fc14099642340ba9018961aeb7bdc3f09137ee7b"
 
       def install
-        echo "starting install... ."
         bin.install "goreleaser-testing"
         bash_completion.install "completions/goreleaser-testing.bash" => "goreleaser-testing"
         zsh_completion.install "completions/goreleaser-testing.zsh" => "_goreleaser-testing"
@@ -21,11 +20,10 @@ class GoreleaserTesting < Formula
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/MaxwelMazur/goreleaser-testing/releases/download/v0.1.0-beta.22/goreleaser-testing_0.1.0-beta.22_Darwin_arm64.tar.gz"
-      sha256 "159c9ec619f1470697fa224023d30b453c14f4e552c3f0511bd1f2dcbc8e67aa"
+      url "https://github.com/MaxwelMazur/goreleaser-testing/releases/download/v0.1.0-beta.23/goreleaser-testing_0.1.0-beta.23_Darwin_arm64.tar.gz"
+      sha256 "9e768004f266741177adec40fc888e95233fe1a5bb3ff8ded8a460316a286758"
 
       def install
-        echo "starting install... ."
         bin.install "goreleaser-testing"
         bash_completion.install "completions/goreleaser-testing.bash" => "goreleaser-testing"
         zsh_completion.install "completions/goreleaser-testing.zsh" => "_goreleaser-testing"
@@ -35,24 +33,22 @@ class GoreleaserTesting < Formula
   end
 
   on_linux do
-    if Hardware::CPU.intel?
-      url "https://github.com/MaxwelMazur/goreleaser-testing/releases/download/v0.1.0-beta.22/goreleaser-testing_0.1.0-beta.22_Linux_x86_64.tar.gz"
-      sha256 "44ac3aaff33b04fdd68b94bad2bc6762e9e8e394f676e6b03f5fc44aa68ca0db"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/MaxwelMazur/goreleaser-testing/releases/download/v0.1.0-beta.23/goreleaser-testing_0.1.0-beta.23_Linux_arm64.tar.gz"
+      sha256 "87e44f3407bc52c2c0244caaff22b008c4627c53eaa8e1a0b423ecf21bce69f7"
 
       def install
-        echo "starting install... ."
         bin.install "goreleaser-testing"
         bash_completion.install "completions/goreleaser-testing.bash" => "goreleaser-testing"
         zsh_completion.install "completions/goreleaser-testing.zsh" => "_goreleaser-testing"
         fish_completion.install "completions/goreleaser-testing.fish"
       end
     end
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/MaxwelMazur/goreleaser-testing/releases/download/v0.1.0-beta.22/goreleaser-testing_0.1.0-beta.22_Linux_arm64.tar.gz"
-      sha256 "9121b4f45da485a1709cf95c1ab4dc7df469c29daad5462b2cdf435850a04251"
+    if Hardware::CPU.intel?
+      url "https://github.com/MaxwelMazur/goreleaser-testing/releases/download/v0.1.0-beta.23/goreleaser-testing_0.1.0-beta.23_Linux_x86_64.tar.gz"
+      sha256 "5b2744370b2f573e46931ba92cae728f4817454b4ab7f1fa832cb05af37ce3c6"
 
       def install
-        echo "starting install... ."
         bin.install "goreleaser-testing"
         bash_completion.install "completions/goreleaser-testing.bash" => "goreleaser-testing"
         zsh_completion.install "completions/goreleaser-testing.zsh" => "_goreleaser-testing"
