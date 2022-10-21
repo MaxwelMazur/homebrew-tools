@@ -5,54 +5,54 @@
 class GoreleaserTesting < Formula
   desc ""
   homepage "https://github.com/MaxwelMazur/homebrew-tools"
-  version "0.1.0-beta.15"
+  version "0.1.0-beta.16"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/MaxwelMazur/goreleaser-testing/releases/download/v0.1.0-beta.15/goreleaser-testing_0.1.0-beta.15_Darwin_x86_64.tar.gz"
-      sha256 "880390f8f33a9ccefbc564785861d9678319c3b94c04d8b8800dd10dd2e34039"
+      url "https://github.com/MaxwelMazur/goreleaser-testing/releases/download/v0.1.0-beta.16/goreleaser-testing_0.1.0-beta.16_Darwin_x86_64.tar.gz"
+      sha256 "96e45663e984ffb010d9af14c0f48f271c98b9f9883140bb8c211c705838a139"
 
       def install
         bin.install "goreleaser-testing"
-        bash_completion.install "./completions/goreleaser-testing.bash" => "goreleaser-testing"
-        zsh_completion.install "./completions/goreleaser-testing.zsh" => "_azioncli"
-        fish_completion.install "./completions/goreleaser-testing.fish"
+        bash_completion.install "completions/goreleaser-testing.bash" => "goreleaser-testing"
+        zsh_completion.install "completions/goreleaser-testing.zsh" => "_azioncli"
+        fish_completion.install "completions/goreleaser-testing.fish"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/MaxwelMazur/goreleaser-testing/releases/download/v0.1.0-beta.15/goreleaser-testing_0.1.0-beta.15_Darwin_arm64.tar.gz"
-      sha256 "2bbd021b10015b8902e9f2462d00ced09dc3dcf13b5eb537491b803ea4cdedb4"
+      url "https://github.com/MaxwelMazur/goreleaser-testing/releases/download/v0.1.0-beta.16/goreleaser-testing_0.1.0-beta.16_Darwin_arm64.tar.gz"
+      sha256 "f997f1241310a1a2df63311c791002f1978b2854b3b83ea87981fd9a8135486d"
 
       def install
         bin.install "goreleaser-testing"
-        bash_completion.install "./completions/goreleaser-testing.bash" => "goreleaser-testing"
-        zsh_completion.install "./completions/goreleaser-testing.zsh" => "_azioncli"
-        fish_completion.install "./completions/goreleaser-testing.fish"
+        bash_completion.install "completions/goreleaser-testing.bash" => "goreleaser-testing"
+        zsh_completion.install "completions/goreleaser-testing.zsh" => "_azioncli"
+        fish_completion.install "completions/goreleaser-testing.fish"
       end
     end
   end
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/MaxwelMazur/goreleaser-testing/releases/download/v0.1.0-beta.15/goreleaser-testing_0.1.0-beta.15_Linux_arm64.tar.gz"
-      sha256 "b55b20131a6e3e199f8c9a0e3843c34e18d1df08af93ccc2d7ea3f223fa8d597"
+      url "https://github.com/MaxwelMazur/goreleaser-testing/releases/download/v0.1.0-beta.16/goreleaser-testing_0.1.0-beta.16_Linux_arm64.tar.gz"
+      sha256 "6eafbc55c305d357a4d9ec87a6f96f82c24f7512861c620b6eee9a783714b5e8"
 
       def install
         bin.install "goreleaser-testing"
-        bash_completion.install "./completions/goreleaser-testing.bash" => "goreleaser-testing"
-        zsh_completion.install "./completions/goreleaser-testing.zsh" => "_azioncli"
-        fish_completion.install "./completions/goreleaser-testing.fish"
+        bash_completion.install "completions/goreleaser-testing.bash" => "goreleaser-testing"
+        zsh_completion.install "completions/goreleaser-testing.zsh" => "_azioncli"
+        fish_completion.install "completions/goreleaser-testing.fish"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/MaxwelMazur/goreleaser-testing/releases/download/v0.1.0-beta.15/goreleaser-testing_0.1.0-beta.15_Linux_x86_64.tar.gz"
-      sha256 "3c80d04e30c0e7e084d7507f6e58ea3b61ebe4f4c9bb496129511129eff06a4e"
+      url "https://github.com/MaxwelMazur/goreleaser-testing/releases/download/v0.1.0-beta.16/goreleaser-testing_0.1.0-beta.16_Linux_x86_64.tar.gz"
+      sha256 "0f34ed22a55adc3e55ad273c43a568c3ab3e9c13fd066601b572cab2b4c8e3b9"
 
       def install
         bin.install "goreleaser-testing"
-        bash_completion.install "./completions/goreleaser-testing.bash" => "goreleaser-testing"
-        zsh_completion.install "./completions/goreleaser-testing.zsh" => "_azioncli"
-        fish_completion.install "./completions/goreleaser-testing.fish"
+        bash_completion.install "completions/goreleaser-testing.bash" => "goreleaser-testing"
+        zsh_completion.install "completions/goreleaser-testing.zsh" => "_azioncli"
+        fish_completion.install "completions/goreleaser-testing.fish"
       end
     end
   end
