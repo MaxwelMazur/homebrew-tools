@@ -5,54 +5,54 @@
 class GoreleaserTesting < Formula
   desc ""
   homepage "https://github.com/MaxwelMazur/homebrew-tools"
-  version "0.1.0-beta.2"
+  version "0.1.0-beta.3"
 
   on_macos do
-    if Hardware::CPU.arm?
-      url "https://github.com/MaxwelMazur/goreleaser-testing/releases/download/v0.1.0-beta.2/goreleaser-testing_0.1.0-beta.2_Darwin_arm64.tar.gz"
-      sha256 "49ce03514719b61fada669e63cdb963c2cf07930d0110e4625b9c1df61f3dbf7"
+    if Hardware::CPU.intel?
+      url "https://github.com/MaxwelMazur/goreleaser-testing/releases/download/v0.1.0-beta.3/goreleaser-testing_0.1.0-beta.3_Darwin_x86_64.tar.gz"
+      sha256 "19fc14563eb057c70b48dcdc4e71a54a3ddb37ee5217c9f7473769b2808c3ec0"
 
       def install
         bin.install "azioncli"
-        bash_completion.install "scripts/completions/azioncli.bash" => "azioncli"
-        zsh_completion.install "scripts/completions/azioncli.zsh" => "_azioncli"
-        fish_completion.install "scripts/completions/azioncli.fish"
+        bash_completion.install "./scripts/completions/azioncli.bash" => "azioncli"
+        zsh_completion.install "./scripts/completions/azioncli.zsh" => "_azioncli"
+        fish_completion.install "./scripts/completions/azioncli.fish"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/MaxwelMazur/goreleaser-testing/releases/download/v0.1.0-beta.2/goreleaser-testing_0.1.0-beta.2_Darwin_x86_64.tar.gz"
-      sha256 "e27e306e4b2bf678ef785e12ec309060936d6f1f7395685884c872f1529a36bb"
+    if Hardware::CPU.arm?
+      url "https://github.com/MaxwelMazur/goreleaser-testing/releases/download/v0.1.0-beta.3/goreleaser-testing_0.1.0-beta.3_Darwin_arm64.tar.gz"
+      sha256 "38116c5690c559f2f4a1c67c1bc7e66829f7bb7706a111542508a8d077370f0a"
 
       def install
         bin.install "azioncli"
-        bash_completion.install "scripts/completions/azioncli.bash" => "azioncli"
-        zsh_completion.install "scripts/completions/azioncli.zsh" => "_azioncli"
-        fish_completion.install "scripts/completions/azioncli.fish"
+        bash_completion.install "./scripts/completions/azioncli.bash" => "azioncli"
+        zsh_completion.install "./scripts/completions/azioncli.zsh" => "_azioncli"
+        fish_completion.install "./scripts/completions/azioncli.fish"
       end
     end
   end
 
   on_linux do
-    if Hardware::CPU.intel?
-      url "https://github.com/MaxwelMazur/goreleaser-testing/releases/download/v0.1.0-beta.2/goreleaser-testing_0.1.0-beta.2_Linux_x86_64.tar.gz"
-      sha256 "1231210bfc1e3a356b58a86b4bce0a0dda29f115727912247e4dac00b56b73d1"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/MaxwelMazur/goreleaser-testing/releases/download/v0.1.0-beta.3/goreleaser-testing_0.1.0-beta.3_Linux_arm64.tar.gz"
+      sha256 "9571d75f09192ecd3e39ed025860c9f7b405cfe6d8e3423c96267168c87cddd2"
 
       def install
         bin.install "azioncli"
-        bash_completion.install "scripts/completions/azioncli.bash" => "azioncli"
-        zsh_completion.install "scripts/completions/azioncli.zsh" => "_azioncli"
-        fish_completion.install "scripts/completions/azioncli.fish"
+        bash_completion.install "./scripts/completions/azioncli.bash" => "azioncli"
+        zsh_completion.install "./scripts/completions/azioncli.zsh" => "_azioncli"
+        fish_completion.install "./scripts/completions/azioncli.fish"
       end
     end
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/MaxwelMazur/goreleaser-testing/releases/download/v0.1.0-beta.2/goreleaser-testing_0.1.0-beta.2_Linux_arm64.tar.gz"
-      sha256 "efa4f6bb9301579af551452b9e6524b41be58510be515771448e9cc69e5ae23f"
+    if Hardware::CPU.intel?
+      url "https://github.com/MaxwelMazur/goreleaser-testing/releases/download/v0.1.0-beta.3/goreleaser-testing_0.1.0-beta.3_Linux_x86_64.tar.gz"
+      sha256 "43cb5819968326e8f03660ad982e5932344a313be8e7bf6852becffde342f755"
 
       def install
         bin.install "azioncli"
-        bash_completion.install "scripts/completions/azioncli.bash" => "azioncli"
-        zsh_completion.install "scripts/completions/azioncli.zsh" => "_azioncli"
-        fish_completion.install "scripts/completions/azioncli.fish"
+        bash_completion.install "./scripts/completions/azioncli.bash" => "azioncli"
+        zsh_completion.install "./scripts/completions/azioncli.zsh" => "_azioncli"
+        fish_completion.install "./scripts/completions/azioncli.fish"
       end
     end
   end
